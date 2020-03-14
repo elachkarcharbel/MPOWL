@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/elachkar/ontologies/mei-score#"
+<rdf:RDF xmlns="http://www.semanticweb.org/elachkar/ontologies/mei-score"
      xml:base="http://www.semanticweb.org/elachkar/ontologies/mei-score"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -127,6 +127,24 @@
     
 
 
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#hasDots -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasDots">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#isNote"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#dot"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#hasDur -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasDur">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#isNote"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#dur"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#hasEditorialDeclaration -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasEditorialDeclaration">
@@ -167,8 +185,9 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasMNR">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#isNote"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#note"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#rest"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#mnr"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#dur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#snr"/>
     </owl:ObjectProperty>
     
 
@@ -199,6 +218,15 @@
         <rdfs:range rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#space"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#syllable"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#tuplet"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#hasOct -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasOct">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#isNote"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#oct"/>
     </owl:ObjectProperty>
     
 
@@ -256,6 +284,15 @@
     
 
 
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#hasPname -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasPname">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#isNote"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#pname"/>
+    </owl:ObjectProperty>
+    
+
+
     <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#hasPrefatoryText -->
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasPrefatoryText">
@@ -293,8 +330,12 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasSNR">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#isNote"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#note"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#rest"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#snr"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#dot"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#dur"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#mnr"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#oct"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#pname"/>
     </owl:ObjectProperty>
     
 
@@ -1111,6 +1152,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#isMorphophonologicalRhythmicAndMelodicRewriting">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#isSingleMeasureContainer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#mrmr"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#anchoredText"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#arpeg"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#body"/>
@@ -1400,6 +1442,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#isPhonoRealizationContainer">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#isSingleMeasureContainer"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#phonoRealization"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#anchoredText"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#arpeg"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#mordent"/>
@@ -2069,6 +2112,7 @@
 
     <owl:ObjectProperty rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#isVectorTranscodingContainer">
         <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasSingleMusicalText"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#vecTrans"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#back"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#body"/>
         <rdfs:range rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#front"/>
@@ -9335,6 +9379,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#dur -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#dur">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#note"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#dynam -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#dynam">
@@ -9713,6 +9765,14 @@
     
 
 
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#mnr -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#mnr">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#note"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#mordent -->
 
     <owl:Class rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#mordent">
@@ -9796,6 +9856,14 @@
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#relationList"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#source"/>
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#work"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#oct -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#oct">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#note"/>
     </owl:Class>
     
 
@@ -9904,6 +9972,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#physLoc">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#source"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#pname -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#pname">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#note"/>
     </owl:Class>
     
 
@@ -10079,6 +10155,14 @@
 
     <owl:Class rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#slur">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#measure"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#snr -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#snr">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#note"/>
     </owl:Class>
     
 
@@ -10278,6 +10362,201 @@
     <owl:Class rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#workDesc">
         <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#meiHead"/>
     </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#a -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#a">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#pname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#alpha -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#alpha">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#snr"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#b -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#b">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#pname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#beta -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#beta">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#snr"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#c -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#c">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#pname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#d -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#d">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#pname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#e -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#e">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#pname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#f -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#f">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#pname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#false -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#false">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#mnr"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#g -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#g">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#pname"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#s -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#s">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#accid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#true -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#true">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#mnr"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#0 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#0">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#dot"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#dur"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#1qf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#1qf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#accid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#1qs -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#1qs">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#accid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#dur"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#dur"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#oct"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#32">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#dur"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#dur"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#oct"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/elachkar/ontologies/mei-score#8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#8">
+        <rdf:type rdf:resource="http://www.semanticweb.org/elachkar/ontologies/mei-score#dur"/>
+    </owl:NamedIndividual>
     
 
 
@@ -10551,6 +10830,90 @@
             <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#perfResList"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#role"/>
             <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#roleDesc"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#f"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#s"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#f"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#1qf"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#f"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#1qs"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#0"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#1"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#1"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDifferent"/>
+        <owl:distinctMembers rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#2"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#4"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#5"/>
+        </owl:distinctMembers>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasAccidental"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasDots"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasDur"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasMNR"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasOct"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasPname"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasSNR"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#isArticulationIndicator"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#isAugmentationOrDivisionDot"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#isDivisionOfLyrics"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasAccidental"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasDur"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasMNR"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasOct"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasPname"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasSNR"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#isArticulationIndicator"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#isAugmentationOrDivisionDot"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#isDivisionOfLyrics"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasAccidental"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasDur"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasMNR"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasOct"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#hasSNR"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#isArticulationIndicator"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#isAugmentationOrDivisionDot"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/elachkar/ontologies/mei-score#isDivisionOfLyrics"/>
         </owl:members>
     </rdf:Description>
 </rdf:RDF>
